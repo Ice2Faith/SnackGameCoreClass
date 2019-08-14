@@ -1,9 +1,9 @@
 /** Name: SnackCoreTest*/
-#include<iostream>
 #include"Snack.h"
+#include<iostream>
 #include<graphics.h>
 #include<conio.h>
-int MAP_LINE = 25;
+int MAP_LINE = 30;
 int MAP_COL = 40;
 int BLOCK_SIZE = 25;
 using namespace std;
@@ -11,7 +11,7 @@ void DrawMap(Snack& mygame);
 MOV_DIRECT GetMove();
 int main(int argc, char * argv[])
 {
-	HWND hwnd = initgraph(BLOCK_SIZE*MAP_COL, BLOCK_SIZE*MAP_LINE);
+	HWND hwnd = initgraph(BLOCK_SIZE*MAP_COL, BLOCK_SIZE*MAP_LINE,SHOWCONSOLE);
 	setbkcolor(RGB(200,200,200));
 	setbkmode(TRANSPARENT);
 	settextcolor(RGB(120,220,120));
@@ -62,7 +62,7 @@ int main(int argc, char * argv[])
 			{
 				if (!mygame.AutoRun())
 					break;
-				Sleep(20);
+				Sleep(10);
 			}
 		}
 		if (MessageBox(hwnd, "是否重玩？", "游戏提示：游戏结束", MB_YESNO) == IDNO)
