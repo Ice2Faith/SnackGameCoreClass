@@ -11,7 +11,7 @@ void DrawMap(Snack& mygame);
 MOV_DIRECT GetMove();
 int main(int argc, char * argv[])
 {
-	HWND hwnd = initgraph(BLOCK_SIZE*MAP_COL, BLOCK_SIZE*MAP_LINE,SHOWCONSOLE);
+	HWND hwnd = initgraph(BLOCK_SIZE*MAP_COL, BLOCK_SIZE*MAP_LINE);
 	setbkcolor(RGB(200,200,200));
 	setbkmode(TRANSPARENT);
 	settextcolor(RGB(120,220,120));
